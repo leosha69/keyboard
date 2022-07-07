@@ -27,3 +27,14 @@ func GetInt() (int) {
     
     return num
 }
+
+func GetFloat() (float64) {
+    reader := bufio.NewReader(os.Stdin)
+    
+    input, _ := reader.ReadString('\n')
+    input = strings.TrimSpace(input)
+    
+    num, _ := strconv.ParseFloat(input, 64)
+    
+    return num
+}
